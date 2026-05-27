@@ -1,47 +1,47 @@
-.register-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f5f7fb;
-  }
-  
-  .register-box {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 350px;
-    text-align: center;
-  }
-  
-  .role-selection {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .role-card {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-  
-  .role-card.active {
-    border: 2px solid blue;
-  }
-  
-  input, select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-  }
-  
-  button {
-    width: 100%;
-    margin-top: 15px;
-    padding: 10px;
-    background: blue;
-    color: white;
-    border: none;
-  }
+/* .register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f7fb;
+}
+
+.register-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+}
+.role-selection {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.role-card {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.role-card.active {
+  border: 2px solid blue;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: blue;
+  color: white;
+  border: none;
+} */

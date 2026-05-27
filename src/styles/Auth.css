@@ -1,139 +1,433 @@
-/* .auth-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f5f7fb;
-}
+/* =========================
+   GLOBAL
+========================= */
 
-.auth-box {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  width: 320px;
-  text-align: center;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background: #3b82f6;
-  color: white;
-  border: none;
-}
-
-.link {
-  color: blue;
-  cursor: pointer;
-} */
-
-/* 1... */
-
-/* Layout */
-.auth-wrapper {
-  display: flex;
-  height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
 }
 
-/* LEFT SIDE */
-.auth-left {
-  flex: 1;
-  background: linear-gradient(135deg, #4f46e5, #3b82f6);
-  color: white;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f5f6fb;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.auth-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #f5f6fb;
+}
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.left-section {
+  width: 50%;
+  background: #eef0fb;
+  padding: 40px 55px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px;
+  position: relative;
+  overflow: hidden;
 }
 
-.auth-left h1 {
-  font-size: 36px;
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  position: absolute;
+  top: 35px;
+  left: 45px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.auth-left p {
-  margin-top: 10px;
-  opacity: 0.9;
+.logo-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #6c4df6, #8b6dff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
 }
 
-/* RIGHT SIDE */
-.auth-right {
-  flex: 1;
+.logo h3 {
+  font-size: 11px;
+  color: #23243a;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.logo p {
+  font-size: 9px;
+  color: #7d8397;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.dashboard-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.dashboard-image img {
+  width: 68%;
+  max-width: 340px;
+  object-fit: contain;
+}
+
+/* =========================
+   WELCOME TEXT
+========================= */
+
+.welcome-text {
+  margin-top: 40px;
+  padding-left: 15px;
+}
+
+.welcome-text span {
+  color: #7f8497;
+  font-size: 13px;
+}
+
+.welcome-text h1 {
+  font-size: 42px;
+  color: #1f2235;
+  margin-top: 8px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.line {
+  width: 55px;
+  height: 4px;
+  background: #6c4df6;
+  border-radius: 10px;
+  margin: 18px 0;
+}
+
+.welcome-text h4 {
+  font-size: 15px;
+  color: #22263c;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.welcome-text p {
+  color: #747b91;
+  width: 80%;
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.footer-text {
+  margin-top: 18px;
+  color: #8a90a4;
+  font-size: 12px;
+}
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.right-section {
+  width: 50%;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f8fafc;
+  padding: 25px;
 }
 
-/* CARD */
-.auth-card {
-  background: white;
-  padding: 30px;
-  width: 320px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+/* =========================
+   LOGIN & REGISTER CARD
+========================= */
 
-.auth-card h2 {
-  margin-bottom: 20px;
-}
-
-/* INPUTS */
-input,
-select {
+.login-card,
+.register-card {
   width: 100%;
-  padding: 10px;
-  margin-top: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  max-width: 430px;
+  background: #ffffff;
+  border: 1px solid #ececf4;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 }
 
-/* BUTTON */
-button {
-  width: 100%;
-  margin-top: 15px;
-  padding: 10px;
-  background: #4f46e5;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
+/* =========================
+   USER ICON
+========================= */
 
-button:hover {
-  background: #4338ca;
-}
-
-/* ROLE */
-.roles {
+.user-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f1edff;
+  color: #6c4df6;
   display: flex;
-  gap: 8px;
-  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px auto;
+  font-size: 22px;
 }
 
-.role {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+/* =========================
+   TITLES
+========================= */
+
+.login-title,
+.register-card h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e2235;
+  margin-bottom: 6px;
+}
+
+.sub-text {
+  text-align: center;
+  color: #8b91a4;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+/* =========================
+   LABELS
+========================= */
+
+.register-card label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 7px;
+  color: #31364a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.register-card input,
+.register-card select,
+.input-group input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #dfe3ee;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 13px;
+  outline: none;
+  background: white;
+  transition: 0.3s;
+}
+
+.register-card input:focus,
+.register-card select:focus,
+.input-group input:focus {
+  border-color: #6c4df6;
+  box-shadow: 0 0 0 3px rgba(108, 77, 246, 0.08);
+}
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.input-group {
+  position: relative;
+  margin-top: 14px;
+}
+
+.input-group input {
+  padding-left: 42px;
+  padding-right: 42px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 14px;
+  color: #8b91a4;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #8b91a4;
+}
+
+/* =========================
+   DOUBLE INPUT
+========================= */
+
+.double-input {
+  display: flex;
+  gap: 12px;
+}
+
+.double-input div {
+  width: 100%;
+}
+
+/* =========================
+   LOGIN OPTIONS
+========================= */
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 12px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #70778d;
+}
+
+.forgot-password {
+  color: #6c4df6;
+  font-weight: 600;
   cursor: pointer;
 }
 
-.role.active {
-  background: #e0e7ff;
-  border: 2px solid #4f46e5;
+/* =========================
+   BUTTONS
+========================= */
+
+.login-btn,
+.register-card button {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  background: #0000ff;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* LINK */
-.link {
-  margin-top: 15px;
-  color: #4f46e5;
+.login-btn:hover,
+.register-card button:hover {
+  background: #5b3df5;
+}
+
+/* =========================
+   SECURITY
+========================= */
+
+.security-text {
+  text-align: center;
+  margin-top: 16px;
+  color: #9aa1b5;
+  font-size: 11px;
+}
+
+/* =========================
+   SIGNIN LINK
+========================= */
+
+.signin-link {
+  text-align: center;
+  margin-top: 14px;
+  color: #8b91a4;
+  font-size: 13px;
+}
+
+.signin-link span {
+  color: #6c4df6;
+  font-weight: 600;
   cursor: pointer;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error-text {
+  color: #e53935;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+  html,
+  body {
+    overflow-y: auto;
+  }
+
+  .auth-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  .left-section {
+    min-height: 450px;
+    padding: 30px;
+  }
+
+  .right-section {
+    padding: 25px 18px;
+  }
+
+  .welcome-text h1 {
+    font-size: 34px;
+  }
+
+  .double-input {
+    flex-direction: column;
+  }
+
+  .login-card,
+  .register-card {
+    max-width: 100%;
+  }
 }
